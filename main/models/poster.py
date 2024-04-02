@@ -4,6 +4,7 @@ from main.utils import image_directory_path
 
 
 class Poster(models.Model):
+    objects = models.Manager()
     image = models.ImageField(upload_to=image_directory_path, blank=True, null=True)
 
     def clean(self):
