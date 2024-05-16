@@ -1,11 +1,11 @@
 from django.core.exceptions import ValidationError
 from django.db import models
-from main.utils import image_directory_path
+from main.utils import poster_directory_path
 
 
 class Poster(models.Model):
     objects = models.Manager()
-    image = models.ImageField(upload_to=image_directory_path, blank=True, null=True)
+    image = models.ImageField(upload_to=poster_directory_path, blank=True, null=True)
 
     def clean(self):
         MAX_SIZE = 1024*1024

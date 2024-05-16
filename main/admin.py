@@ -6,7 +6,7 @@ from .resources import InformationAdminResource
 
 @admin.register(Poster)
 class Poster(admin.ModelAdmin):
-    list_display = ['image']
+    list_display = ['id', 'image']
     search_fields = ['image']
 
 

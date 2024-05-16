@@ -1,7 +1,11 @@
-from django.utils import timezone
-
-now = timezone.now()
+from uuid import uuid4
 
 
-def image_directory_path(instance, filename):
-    return f"{now.year}/{now.month}/{now.day}/{filename}"
+def poster_directory_path(instance: str, filename: str):
+    lst = filename.split('.')
+    return f"poster/{uuid4()}.{lst[-1]}"
+
+
+def cadre_directory_path(instance: str, filename: str):
+    lst = filename.split('.')
+    return f"cadre/{uuid4()}"

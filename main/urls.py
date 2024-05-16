@@ -5,7 +5,7 @@ from .views import InformationViewSet, CadreViewSet
 
 router = DefaultRouter()
 router.register("information", InformationViewSet)
-router.register("cedre", CadreViewSet)
+router.register("cadre", CadreViewSet)
 
 
 urlpatterns = [
